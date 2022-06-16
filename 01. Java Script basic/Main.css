@@ -8,3 +8,29 @@
     디스플레이를 보여주고 싶을 떄
     */
 }
+
+/* 06-01. ClassList 에서 추가함 */
+/* css 파일은 하단에 적을수록 우선적용 */
+.list-groups{
+    display : none;
+}
+
+.show {
+    display : block;
+}
+
+.black-bg {
+    width : 100%;
+    height : 100%;
+    position : fixed;
+    background : rgba(0,0,0,0.5);
+    z-index : 5;
+    padding: 30px;
+  }
+  .white-bg {
+    background: white;
+    border-radius: 5px;
+    padding: 30px;
+  } 
+
+

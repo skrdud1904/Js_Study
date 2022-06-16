@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="Main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<!--
+자바스크립트 특징) 너무 길고 더러움
+많은 사람들이 JavaScript의 문법을 별로 안좋아 하기 떄문에
+HTML을 조작하는 부분을 쉽게 재밌게 사용할 수 있도록 라이브러리를 배포함
+그 라이브러리의 종류가 다음과 같음
+1. JQuery
+2. React
+3. Vue
+React, Vue 같은경우 JavaScript의 어느정도 숙련도를 요구하기 때문에 나중에 도전
+여기서는 JQuery 사용함
+QuerySelector => $('.navbar-toggler')로 쉽게 사용
+addEventListener => on('click',function(){})로 쉽게 사용
+저는 JQuery 말고 JavaScript를 배우고 싶다고 하는데 이걸알아야 한다.
+JQuery는 언어가 아닌 라이브러리 이다.
+즉 JQuery를 사용한다고 문법이 달라지는거 아님
+구글에 "JQuery CDN" 이라고 검색 후 제일 상단에 있는 페이지 접근
+JQuery 3.0 Version의 "minified" 버전의 Script 태그를 복사하여 html 파일에 첨부
+모든 라이브러리는 Body문의 끝부분에 붙여넣는 것이 관습이다.
+페이지 로딩 성능 때문에
+-->
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">Navbar</span>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+       </div>
+    </nav>
+
+    <ul class="list-groups" id="test1">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+    <!-- JQuery 사용하면 좋은점 - 1
+    아래의 글자를 '바보보로 변경하려면?
+    -->
+    <p class="hello">안녕</p>
+    <script>
+    // document.querySelector('.hello').innerHTML = '바보';
+    $('.hello').html('바보');
+
+    // <p> 내부 글자 스타일 변경은?
+    $('.hello').css('color', 'red')
+    // class 추가
+    $('.hello').addClass('show')
+    // class 제거
+    // $('.hello').removeclass('show')
+    // class toggle
+    // $('.hello').toggleclass('show')
+    </script>
+
+    <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', function(){
+
+            document.querySelectorAll('.list-groups')[0].classList.toggle('show');
+        })
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
