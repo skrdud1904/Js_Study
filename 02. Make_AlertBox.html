@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="Main.css">
+</head>
+<body>
+<!-- UI는 CASE방식으로 배울수도 있으나 UI가 100가지가 넘는데 다 배는거 비효율적임 -->
+<!--
+UI 만드는 Step을 알려줌 혼자 만들 수 있게된다.
+왜? 패턴이 거의 다 동일하다.
+1. HTML/CSS로 미리 디자인(필요하면 미리 숨김)
+2. 필요할 때 보여달라고 코드 짬(자바스크립트로)
+ -->
+
+ <div class="alert-box" id="alert">알림창임
+  <button onclick="document.getElementById('alert').style.display =
+  'none';">닫기
+  </button>
+ </div>
+ <button onclick="document.getElementById('alert').style.display =
+  'block';">버튼
+</button>
+<!-- 숙제: 알림창을 닫는버튼과 기능 만들어오기 -->
+
+</body>
+</html>
+
+<!-- 초반에 자동완성기능을 활용하는 습관 이용하기
+왜? 직접 타이핑할 경우 오탈자가 많이 발생할 확률이 높다.
+ex) 대문자를 소문자로 작성할 경우 알아듣지 못함 -->
