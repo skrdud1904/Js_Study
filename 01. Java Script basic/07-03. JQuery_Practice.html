@@ -33,13 +33,35 @@
         <li class="list-group-item">And a fifth one</li>
     </ul>
 
-    <button>로그인</button>
+    <button class="login">로그인</button>
     <!--
     버튼을 클릭하면 모델(모달창)창이 뜨도록 해야 한다.
     강의 하단에 모달창 디자인 있음(CSS 코드도 있음)
     -->
 
     <script>
+        // 로그인 모달 창 Jquery로 구현
+        $('.login').on('click', function(){
+            $('.black-bg').addClass('switch-modal');
+        })
+
+        // 로그인 모달 창 javascript로 구현
+        // document.querySelector('.login').addEventListener('click',function(){
+        //     document.querySelector('.black-bg').classList.add('switch-modal')
+        // })
+
+        // 로그인 모달 창의 닫기 기능 JQuery로 구현
+        $('.btn').on('click',function(){
+            $('.black-bg').removeClass('switch-modal');
+
+        })
+
+        // 로그인 모달 창의 닫기 기능 JavaScript로 구현
+        // document.querySelectorAll('.btn')[0].addEventListener('click',function(){
+        //     document.querySelector('.black-bg').classList.remove('switch-modal');
+
+        // })
+
         document.querySelector('.navbar-toggler').addEventListener('click', function(){
 
             document.querySelectorAll('.list-groups')[0].classList.toggle('show');

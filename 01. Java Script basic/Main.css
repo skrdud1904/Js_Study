@@ -19,6 +19,7 @@
     display : block;
 }
 
+/* 07-03. JQuery_Practice 에서 추가함 */
 .black-bg {
     width : 100%;
     height : 100%;
@@ -26,7 +27,12 @@
     background : rgba(0,0,0,0.5);
     z-index : 5;
     padding: 30px;
+    display : none;
   }
+
+  .switch-modal {
+    display : block;
+}
   .white-bg {
     background: white;
     border-radius: 5px;
